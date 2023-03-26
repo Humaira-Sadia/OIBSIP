@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tribute-Page</title>
+</head>
+
+<body>
+    <header>
+        <h1>Elon Musk</h1>
+        <h4>A MAN'S VISION TO CHANGE THE WORLD</h4>
+    </header>
+    <div class="main-body">
+        <div class="small-img" style="display: none;">
+        <img src="./images/elon-banner.jpg" alt=""></div>
+        <div class="image">
+            <img src="./images/rocket_1.png" id='rocket' alt="rocket">
+            <img src="./images/elon-1.png" id='elon'alt="Elon Musk">
+        </div>
+        <div class="centre">
+
+            <div class="content">
+                <div class="biography" id="bio">
+                    <h1>Biography</h1>
+                    <p>
+                        Elon Musk is an inventor and an engineer. He is the owner of, among other things, Tesla Motors
+                        and SpaceX. Musk is a genius and will go down as one of the greatest engineers the world has
+                        ever seen. He is pushing the boundaries of science and technology with his ambitions in electric
+                        power and space. Like a true engineer, he has developed solutions for the problems of modern
+                        civilization. He has plans to solve our traffic problems with autonomous cars and tunnel
+                        networks. Perhaps more remarkable, he has plans to eliminate most of our fossil fuel dependence
+                        and switch to cleaner and more sustainable sources of energy.
+                    </p>
+                </div>
+                <div class="spaceX" id="space" style="display: none; font-size: 14px;">
+                    <h1 style="font-size: 38px;">Space</h1>
+                    <p>
+                        Musk was long convinced that for life to survive, humanity has to become a multiplanet species.
+                        However, he was dissatisfied with the great expense of rocket launchers. In 2002 he founded
+                        Space Exploration Technologies (SpaceX) to make more affordable rockets. Its first two rockets
+                        were the Falcon 1 (first launched in 2006) and the larger Falcon 9 (first launched in 2010),
+                        which were designed to cost much less than competing rockets. A third rocket, the Falcon Heavy
+                        (first launched in 2018), was designed to carry 117,000 pounds (53,000 kg) to orbit, nearly
+                        twice as much as its largest competitor, the Boeing Company’s Delta IV Heavy, for one-third the
+                        cost. SpaceX has announced the successor to the Falcon 9 and the Falcon Heavy: the Super
+                        Heavy–Starship system. The Super Heavy first stage would be capable of lifting 100,000 kg
+                        (220,000 pounds) to low Earth orbit. The payload would be the Starship, a spacecraft designed
+                        for providing fast transportation between cities on Earth and building bases on the Moon and
+                        Mars. SpaceX also developed the Dragon spacecraft, which carries supplies to the International
+                        Space Station (ISS). Dragon can carry as many as seven astronauts, and it had a crewed flight
+                        carrying astronauts Doug Hurley and Robert Behnken to the ISS in 2020. The first test flights of
+                        the Super Heavy–Starship system launched in 2020. In addition to being CEO of SpaceX, Musk was
+                        also chief designer in building the Falcon rockets, Dragon, and Starship. SpaceX is contracted
+                        to build the lander for the astronauts returning to the Moon by 2025 as part of NASA’s Artemis
+                        space program.
+                    </p>
+                </div>
+                <div class="tesla1" id="tesla" style="display: none">
+                    <h1>Tesla</h1>
+                    <p>
+                        Musk had long been interested in the possibilities of electric cars, and in 2004 he became one
+                        of the major funders of Tesla Motors (later renamed Tesla), an electric car company founded by
+                        entrepreneurs Martin Eberhard and Marc Tarpenning. In 2006 Tesla introduced its first car, the
+                        Roadster, which could travel 245 miles (394 km) on a single charge. Unlike most previous
+                        electric vehicles, which Musk thought were stodgy and uninteresting, it was a sports car that
+                        could go from 0 to 60 miles (97 km) per hour in less than four seconds. In 2010 the company’s
+                        initial public offering raised about $226 million. Two years later Tesla introduced the Model S
+                        sedan, which was acclaimed by automotive critics for its performance and design. The company won
+                        further praise for its Model X luxury SUV, which went on the market in 2015. The Model 3, a
+                        less-expensive vehicle, went into production in 2017 and became the best-selling electric car of
+                        all time.
+                    </p>
+                </div>
+                <div class="twit" id="twitter" style="display: none">
+                    <h1>Twitter</h1>
+                    <p>
+                        Musk joined the social media service Twitter in 2009, and, as @elonmusk, he became one of the
+                        most popular accounts on the site, with more than 85 million followers as of 2022. He expressed
+                        reservations about Tesla’s being publicly traded, and in August 2018 he made a series of tweets
+                        about taking the company private at a value of $420 per share, noting that he had “secured
+                        funding.” (The value of $420 was seen as a joking reference to April 20, a day celebrated by
+                        devotees of cannabis.) The following month the U.S. Securities and Exchange Commission (SEC)
+                        sued Musk for securities fraud, alleging that the tweets were “false and misleading.” Shortly
+                        thereafter Tesla’s board rejected the SEC’s proposed settlement, reportedly because Musk had
+                        threatened to resign. However, the news sent Tesla stock plummeting, and a harsher deal was
+                        ultimately accepted. Its terms included Musk’s stepping down as chairman for three years, though
+                        he was allowed to continue as CEO; his tweets were to be preapproved by Tesla lawyers, and fines
+                        of $20 million for both Tesla and Musk were levied.
+                    </p>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="biography" onclick="change(this.id)"><span></span><span></span><span></span><span></span>Bio</button>
+                <button id="spaceX" onclick="change(this.id)"><span></span><span></span><span></span><span></span>SpaceX</button>
+                <button id="tesla1" onclick="change(this.id)"><span></span><span></span><span></span><span></span>Tesla</button>
+                <button id="twit" onclick="change(this.id)"><span></span><span></span><span></span><span></span>Twitter</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let bio = document.querySelector('#bio');
+        let space = document.querySelector('#space');
+        let tesla = document.querySelector('#tesla');
+        let twitter = document.querySelector('#twitter');
+
+        function change(id) {
+            if (bio.className === id) bio.style.display = 'block';
+            else bio.style.display = 'none';
+
+            if (space.className === id) space.style.display = 'block';
+            else space.style.display = 'none';
+
+            if (tesla.className === id) tesla.style.display = 'block';
+            else tesla.style.display = 'none';
+
+            if (twitter.className === id) twitter.style.display = 'block';
+            else twitter.style.display = 'none';
+        };
+    </script>
+</body>
+
+</html>
